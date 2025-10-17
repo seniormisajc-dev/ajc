@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helping Systems - Agrawal Jain And Company</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8fafc; /* light background */
+      color: #1e293b;
+    }
+
+    header {
+      background: #111827; /* dark header */
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .home-btn {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      background: #3b82f6;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .home-btn:hover {
+      background: #1e40af;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .container h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #1e293b;
+    }
+
+    .container p {
+      max-width: 800px;
+      margin: 0 auto 30px auto;
+      line-height: 1.6;
+      font-size: 16px;
+      color: #334155;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    .card i {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* ✅ Row Colors (fixed using nth-of-type) */
+    .card:nth-of-type(-n+4) {
+      background: #dcfce7; /* light green */
+    }
+
+    .card:nth-of-type(n+5):nth-of-type(-n+8) {
+      background: #fef9c3; /* light yellow */
+    }
+
+    .card:nth-of-type(n+9) {
+      background: #f1f5f9; /* light grey */
+    }
+
+    /* ✅ Icon colors matching rows */
+    .card:nth-of-type(-n+4) i {
+      color: #15803d; /* green icons */
+    }
+
+    .card:nth-of-type(n+5):nth-of-type(-n+8) i {
+      color: #ca8a04; /* yellow icons */
+    }
+
+    .card:nth-of-type(n+9) i {
+      color: #475569; /* grey icons */
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #e2e8f0;
+      color: #475569;
+      margin-top: 40px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 22px;
+      }
+      .home-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+      .container h2 {
+        font-size: 24px;
+      }
+      .card h3 {
+        font-size: 18px;
+      }
+      .card p {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 18px;
+      }
+      .container {
+        padding: 20px 15px;
+      }
+      .container p {
+        font-size: 14px;
+      }
+      .card {
+        padding: 18px;
+      }
+      .card i {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Helping Systems for Smooth Operations</h1>
+    <a href="index.html" class="home-btn"><i class="fas fa-arrow-left"></i> Back</a>
+  </header>
+
+  <div class="container">
+    <h2>Our Core Supporting Systems</h2>
+    <p>Each system is carefully designed to streamline operations and is accessible via Google Spreadsheets for real-time collaboration.</p>
+
+    <div class="cards">
+      <a href="https://docs.google.com/spreadsheets/d/1Gc1apeQpcztv2PLsAPMxDxUMnJee71AHuUS2xzds7js/edit?usp=sharing" target="_blank" class="card">
+        <i class="fas fa-file-alt"></i>
+        <h3>Internal Audit FMS</h3>
+        <p>A structured audit management system ensuring smooth internal reviews and compliance checks.</p>
+      </a>
+
+      <a href="https://docs.google.com/spreadsheets/d/1sHjGL_7D6xIBh4DKZ_x09SUIF3DdqAxeuOgzf6Zr8KQ/edit?usp=sharing" target="_blank" class="card">
+        <i class="fas fa-balance-scale"></i>
+        <h3>Statutory Audit</h3>
+        <p>System to handle statutory audit requirements with checklists and compliance tracking.</p>
+      </a>
+
+      <a href="https://docs.google.com/spreadsheets/d/19TUcaPAsAZpZpk-7mCZnvsJavtlZmhByuqC-fan4kUs/edit?usp=sharing" target="_blank" class="card">
+        <i class="fas fa-tasks"></i>
+        <h3>Delegation</h3>
+        <p>Task delegation platform that ensures smooth allocation and tracking of responsibilities.</p>
+      </a>
+
+      <a href="https://docs.google.com/spreadsheets/d/1kW9QG2whY6_JkGibp38D_ElJj6fcxOBwkz5Z0FJ5HaM/edit?usp=sharing" target="_blank" class="card">
+        <i class="fas fa-check-square"></i>
+        <h3>Checklist</h3>
+        <p>Custom checklists for every assignment, ensuring no step is missed during project execution.</p>
+      </a>
+
+      <a href="https://docs.google.com/spreadsheets/d/1T3BYQ-LlqQmWnW4HIO4gPXp9g3z4aNXnwmnDPH5eYPE/edit?usp=sharing" target="_blank" class="card">
+        <i class="fas fa-project-diagram"></i>
+        <h3>Planning Management System (PMS)</h3>
+        <p>A structured system for effective planning, resource allocation, and timely project execution.</p>
+      </a>
+
+      <a href="https://docs.google.com/spreadsheets/d/1OkfOMiBjp0EC0vCl12nJv5-GwIEyrreA1mbTOgOomOw/edit?usp=sharing" target="_blank" class="card">
+        <i class="fas fa-list-check"></i>
+        <h3>Fullkitting Checklist</h3>
+        <p>A checklist system to ensure all resources, documents, and approvals are ready before project initiation.</p>
+      </a>
+
+      <a href="https://docs.google.com/spreadsheets/d/1YTQqwqVvzbcz8gsC-ygPgEwVVpyTq2BYCS5PqwldM9s/edit?usp=sharing" target="_blank" class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>MIS Reports of Employees</h3>
+        <p>Comprehensive MIS reporting system to track employee performance and project updates.</p>
+      </a>
+
+      <a href="https://docs.google.com/spreadsheets/d/1y8x7N5vj21IcH1Ly3qq_cVRarXHWhUvETSfsN3eke_8/edit?usp=sharing" target="_blank" class="card">
+        <i class="fas fa-users-cog"></i>
+        <h3>HR Management System</h3>
+        <p>A centralized HR system for employee records, attendance, leave, and compliance tracking.</p>
+      </a>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScjxQuPZJfiRifjX-Ibo52THAZYOdHiPejszBLCXqhbcFE-6g/viewform?usp=sharing&ouid=117818751409132286974" target="_blank" class="card">
+        <i class="fas fa-comments"></i>
+        <h3>Client Feedback Form</h3>
+        <p>An interactive system for capturing valuable client feedback to improve our services.</p>
+      </a>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScS5RbXGsfpNXXTHVKh0XJyYjOGy1edN0m9Hl8od8aGjVGtPQ/viewform?usp=sharing&ouid=117818751409132286974" target="_blank" class="card">
+        <i class="fas fa-envelope-open-text"></i>
+        <h3>Enquiry Capture Form</h3>
+        <p>A streamlined form for capturing client enquiries and routing them for prompt follow-up.</p>
+      </a>
+
+      <a href="https://docs.google.com/spreadsheets/d/1EBr6LMZO38fAb7Ezpb67XQNx4nYVzcp2zIR9oIVCM4s/edit?usp=sharing" target="_blank" class="card">
+        <i class="fas fa-shipping-fast"></i>
+        <h3>On Time Delivery (OTD)</h3>
+        <p>A monitoring system to ensure timely delivery of all client projects and assignments.</p>
+      </a>
+
+      <a href="https://forms.gle/4vR9HrQtiW3X8oXH6" target="_blank" class="card">
+        <i class="fas fa-tasks"></i>
+        <h3>Pending Work Form</h3>
+        <p>A form to capture and track all pending assignments, ensuring nothing is left behind.</p>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Agrawal Jain And Company. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

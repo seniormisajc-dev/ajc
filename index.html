@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrawal Jain And Company - Sales Deck</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #f4f6f9; 
+      color: #333;
+    }
+
+    /* Header with background image */
+    header {
+      background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      color: white; 
+      text-align: center; 
+      padding: 60px 20px; 
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      position: relative;
+      z-index: 1;
+      letter-spacing: 1px;
+    }
+    nav {
+      margin-top: 15px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    nav a { 
+      margin: 5px 10px; 
+      color: white; 
+      text-decoration: none; 
+      font-weight: bold;
+      font-size: 14px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero { 
+      text-align: center; 
+      padding: 40px 20px; 
+      background: #ecf0f1; 
+    }
+    .hero h2 { 
+      font-size: 26px; 
+      margin-bottom: 20px; 
+      color: #2c3e50;
+    }
+    .hero p { 
+      font-size: 16px; 
+      max-width: 700px; 
+      margin: 0 auto 25px auto; 
+      line-height: 1.6; 
+    }
+    .cta a { 
+      padding: 12px 25px; 
+      background: #2c3e50; 
+      color: white; 
+      text-decoration: none; 
+      border-radius: 5px; 
+      font-size: 16px; 
+      display: inline-block;
+    }
+    .cta a:hover {
+      background: #1a242f;
+    }
+
+    /* About Us Section */
+    .about {
+      padding: 50px 20px;
+      background: white;
+      text-align: center;
+    }
+    .about h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+    .about p {
+      max-width: 900px;
+      margin: 10px auto;
+      line-height: 1.7;
+      font-size: 15px;
+      text-align: justify;
+    }
+    .about .details {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .about .card {
+      background: #f8fafc;
+      padding: 20px;
+      border-radius: 12px;
+      width: 250px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .about .card h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #2c3e50;
+    }
+    .about .card p {
+      font-size: 14px;
+      margin: 0;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    /* Workflow Section */
+    .workflow {
+      padding: 40px 20px;
+      background: #f9fbfc;
+      text-align: center;
+    }
+    .workflow h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+    .workflow p {
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    .workflow-steps {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .step {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 260px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .step:hover {
+      transform: translateY(-8px);
+    }
+    .step i {
+      font-size: 36px;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+    .step h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #2c3e50;
+      color: white;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        padding: 40px 15px;
+      }
+      header h1 {
+        font-size: 24px;
+      }
+      .hero h2, .about h2, .workflow h2 {
+        font-size: 22px;
+      }
+      .hero p, .about p, .workflow p {
+        font-size: 14px;
+      }
+      .step, .about .card {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        font-size: 13px;
+      }
+      .hero h2, .about h2, .workflow h2 {
+        font-size: 20px;
+      }
+      .hero p, .about p, .workflow p {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Agrawal Jain And Co.</h1>
+    <nav>
+      
+      <a href="casestudy.html">Major Clients</a>
+      <a href="service.html">Services</a>
+      <a href="system.html">System</a> <!-- New Button -->
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to Agrawal Jain & Co.</h2>
+    <p>We are a CA firm specializing in Internal Audit, Statutory Audit, and Corporate Compliances. Our systematic approach using Google Workspace ensures timely and efficient project delivery.</p>
+    <div class="cta">
+      <a href="workflow.html">Let’s View Our Workflow</a>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>Founded in 2005, <strong>Agrawal Jain & Co. (AJC)</strong> is a leading Chartered Accountants firm in Chhattisgarh providing Audit, Management Consultancy, Direct & Indirect Tax Consultancy, Accounting Services, Corporate & Legal Compliance, Business Setup, Project Financing, ROC & Tax Return Filing, and many more solutions. With over 18+ years of expertise and a team of highly competent professionals, we deliver efficacious solutions tailored to client needs.</p>
+    <p>Our philosophy is to partner with clients, banishing the ‘one-size-fits-all’ standardization. Under the leadership of our Founder Partner <strong>CA Rajesh Agrawal</strong>, and with a strong team of 50+ professionals, AJC continues to build trust, provide seamless value, and enjoy an unparalleled reputation.</p>
+    <div class="details">
+      <div class="card">
+        <h3>Year of Establishment</h3>
+        <p>2005</p>
+      </div>
+      <div class="card">
+        <h3>Firm Registration No.</h3>
+        <p>012935C</p>
+      </div>
+      <div class="card">
+        <h3>GST No.</h3>
+        <p>22AAIFR5780L1ZT</p>
+      </div>
+      <div class="card">
+        <h3>PAN</h3>
+        <p>AAIFR5780L</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="workflow" id="workflow">
+    <h2>Our Workflow & Monitoring</h2>
+    <p>We ensure smooth operations through structured systems, weekly project reviews, teamwork, and AI-powered monitoring to deliver every project on time.</p>
+    <div class="workflow-steps">
+      <div class="step">
+        <i class="fas fa-clipboard-check"></i>
+        <h3>Weekly Reviews</h3>
+        <p>All staff projects are reviewed weekly to track progress and ensure compliance.</p>
+      </div>
+      <div class="step">
+        <i class="fas fa-users"></i>
+        <h3>Team Collaboration</h3>
+        <p>Strong teams and systematic workflows minimize internal communication issues.</p>
+      </div>
+      <div class="step">
+        <i class="fas fa-robot"></i>
+        <h3>AI Integrations</h3>
+        <p>AI tools assist in monitoring timelines, reducing delays, and improving accuracy.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Agrawal Jain And Company. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
